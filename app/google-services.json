@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "942498526558",
+    "firebase_url": "https://discovervitcc.firebaseio.com",
+    "project_id": "discovervitcc",
+    "storage_bucket": "discovervitcc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942498526558:android:fc0e2d9d86a8b3f5",
+        "android_client_info": {
+          "package_name": "com.example.aditya.discovervitcc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942498526558-g6es9c10vi07v3nops6ghfusdbk7ao5l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aditya.discovervitcc",
+            "certificate_hash": "ab687744c12e409b3bb0e2a61c220ea9448ffdfa"
+          }
+        },
+        {
+          "client_id": "942498526558-n2pv3nv6ajgfi1obc3ceph999581uike.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtkS-GAyQuUtYyjLu0Svm8TqPM68I3ozY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942498526558-n2pv3nv6ajgfi1obc3ceph999581uike.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
