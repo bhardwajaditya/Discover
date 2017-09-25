@@ -1,5 +1,6 @@
 package com.example.aditya.discovervitcc;
 
+import android.content.Intent;
 import android.nfc.Tag;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -87,6 +88,8 @@ public class signin extends AppCompatActivity {
         public void onComplete(@NonNull Task<AuthResult> task) {
             if(task.isSuccessful()){
                 Toast.makeText(signin.this,"Account Created",Toast.LENGTH_LONG).show();
+                Intent intent1=new Intent(signin.this,menu.class);
+                startActivity(intent1);
             }
             // If sign in fails, display a message to the user. If sign in succeeds
             // the auth state listener will be notified and logic to handle the
@@ -122,6 +125,8 @@ public class signin extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(signin.this,"Signin complete",Toast.LENGTH_LONG).show();
+                            Intent intent1=new Intent(signin.this,menu.class);
+                            startActivity(intent1);
                         }
 
                         // If sign in fails, display a message to the user. If sign in succeeds
