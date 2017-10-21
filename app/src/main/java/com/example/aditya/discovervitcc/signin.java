@@ -35,11 +35,16 @@ public class signin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
+        String i=getIntent().getStringExtra("m1");
         r1=(RelativeLayout)findViewById(R.id.r1);
         r2=(RelativeLayout)findViewById(R.id.r2);
         b1=(Button)findViewById(R.id.s1);
         b2=(Button)findViewById(R.id.signup);
         b3=(Button)findViewById(R.id.signin);
+        if(i.equals("b")){
+            r1.setVisibility(View.GONE);
+            r2.setVisibility(View.VISIBLE);
+        }
         mAuth = FirebaseAuth.getInstance();
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
