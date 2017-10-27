@@ -13,6 +13,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +31,7 @@ public class signin extends AppCompatActivity {
     RelativeLayout r1,r2;
     private FirebaseAuth mAuth;
     EditText e1,e2,e3,e4,e5;
+    ProgressBar pr1,pr3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,8 @@ public class signin extends AppCompatActivity {
         b1=(Button)findViewById(R.id.s1);
         b2=(Button)findViewById(R.id.signup);
         b3=(Button)findViewById(R.id.signin);
+        pr1=(ProgressBar)findViewById(R.id.pr1);
+        pr3=(ProgressBar)findViewById(R.id.pr2);
         if(i.equals("b")){
             r1.setVisibility(View.GONE);
             r2.setVisibility(View.VISIBLE);
@@ -56,12 +60,14 @@ public class signin extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                pr3.setVisibility(View.VISIBLE);
                 registeruser();
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                pr1.setVisibility(View.VISIBLE);
                 signinusers();
             }
         });
@@ -95,6 +101,7 @@ public class signin extends AppCompatActivity {
                 Toast.makeText(signin.this,"Account Created",Toast.LENGTH_LONG).show();
                 Intent intent1=new Intent(signin.this,menu.class);
                 startActivity(intent1);
+                pr3.setVisibility(View.GONE);
             }
             // If sign in fails, display a message to the user. If sign in succeeds
             // the auth state listener will be notified and logic to handle the
@@ -102,6 +109,7 @@ public class signin extends AppCompatActivity {
             if (!task.isSuccessful()) {
                 Toast.makeText(signin.this, "Authentication failed.",
                         Toast.LENGTH_SHORT).show();
+                        pr3.setVisibility(View.GONE);
             }
 
             // ...
@@ -132,6 +140,7 @@ public class signin extends AppCompatActivity {
                             Toast.makeText(signin.this,"Signin complete",Toast.LENGTH_LONG).show();
                             Intent intent1=new Intent(signin.this,menu.class);
                             startActivity(intent1);
+                            pr1.setVisibility(View.GONE);
                         }
 
                         // If sign in fails, display a message to the user. If sign in succeeds
@@ -140,6 +149,7 @@ public class signin extends AppCompatActivity {
                         if (!task.isSuccessful()) {
                             Toast.makeText(signin.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
+                                    pr1.setVisibility(View.GONE);
                         }
 
                         // ...
