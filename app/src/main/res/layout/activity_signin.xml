@@ -91,6 +91,15 @@
         android:layout_below="@+id/signin"
         android:layout_marginTop="15dp"
         android:id="@+id/s1"/>
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:id="@+id/pr1"
+            android:layout_below="@+id/s1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            />
 
     </RelativeLayout>
     <RelativeLayout
@@ -162,6 +171,15 @@
             android:layout_below="@+id/pass2"
             android:layout_marginTop="15dp"
             android:id="@+id/signup"/>
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:id="@+id/pr2"
+            android:layout_below="@+id/signup"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            />
     </RelativeLayout>
 
 </RelativeLayout>
