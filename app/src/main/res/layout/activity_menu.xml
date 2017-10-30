@@ -4,6 +4,11 @@
     app:theme="@style/AppTheme"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
     <android.support.v7.widget.Toolbar
         android:minHeight="70dp"
@@ -27,6 +32,7 @@
             android:textColor="#7c17d8"
             android:background="#ffffff"/>
     </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
     <ScrollView
         android:layout_marginTop="70dp"
         android:layout_width="match_parent"
@@ -46,6 +52,10 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:text="CITY TOUR"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
         android:background="@mipmap/city_tour"
         android:id="@+id/button1"/>
 
@@ -53,6 +63,10 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@mipmap/restaurant"
+        android:text="RESTAURANTS NEARBY"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="25dp"
         android:id="@+id/button2"
         android:layout_below="@+id/button1"
         android:layout_marginTop="0dp"/>
@@ -61,6 +75,10 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:id="@+id/button3"
+        android:text="UTILITY SHOPS"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="25dp"
         android:background="@mipmap/utility"
         android:layout_below="@+id/button2"
         android:layout_marginTop="0dp"
@@ -69,7 +87,10 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:id="@+id/button4"
-
+        android:text="THINGS TO DO"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="25dp"
         android:layout_below="@+id/button3"
         android:layout_marginTop="0dp"/>
 

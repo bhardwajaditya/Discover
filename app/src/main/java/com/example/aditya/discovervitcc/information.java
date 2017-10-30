@@ -43,6 +43,7 @@ public class information extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
 
@@ -55,7 +56,7 @@ public class information extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("CITY TOUR"));
         tabLayout.addTab(tabLayout.newTab().setText("RESTAURANTS"));
         tabLayout.addTab(tabLayout.newTab().setText("UTILITY SHOPS"));
-        tabLayout.addTab(tabLayout.newTab().setText("NIGHTLIFE"));
+        tabLayout.addTab(tabLayout.newTab().setText("THINGS TO DO"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(),tabLayout.getTabCount());
         mViewPager.setAdapter(mSectionsPagerAdapter);
@@ -79,27 +80,8 @@ public class information extends AppCompatActivity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_information, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     /**
      * A placeholder fragment containing a simple view.
@@ -159,6 +141,9 @@ public class information extends AppCompatActivity {
                 case 2:
                     f3 tab3=new f3();
                     return tab3;
+                case 3:
+                    f4 tab4=new f4();
+                    return tab4;
             }
             return null;
         }

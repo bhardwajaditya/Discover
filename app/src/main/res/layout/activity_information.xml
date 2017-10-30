@@ -10,23 +10,38 @@
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
+        android:background="#FF0000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="@dimen/appbar_padding_top"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="#FF0000"
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/AppTheme.PopupOverlay">
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="DISCOVER"
+                android:layout_marginLeft="83dp"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="#FF0000"
+                android:background="#ffffff"/>
 
         </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
+            app:tabMode="scrollable"
+            app:tabIndicatorColor="#FF0000"
+            app:tabTextColor="#FF0000"
+            app:tabSelectedTextColor="#FF0000"
+            android:background="#ffffff"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
