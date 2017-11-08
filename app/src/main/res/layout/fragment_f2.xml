@@ -1,13 +1,38 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="com.example.aditya.discovervitcc.f2">
 
     <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="200dp"
+        android:id="@+id/i5"
+        android:background="@mipmap/city_tour"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
 
-</FrameLayout>
+        android:id="@+id/i6"
+        android:background="@mipmap/city_tour"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:id="@+id/i7"
+        android:background="@mipmap/city_tour"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/i8"
+        android:layout_marginBottom="50dp"
+        android:background="@mipmap/city_tour"/>
+    </LinearLayout>
+
+</ScrollView>
